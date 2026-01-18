@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Favorita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader">
+        <svg class="rose-svg" viewBox="0 0 100 100">
+            <path class="stem" d="M50,98 Q50,70 50,40" />
+            <path class="leaf" d="M50,80 Q30,75 25,60 Q40,65 50,80" />
+            <path class="petal" d="M50,40 C60,20 90,40 50,70 C10,40 40,20 50,40" />
+        </svg>
+        <p>Cargando nuestro lugar especial...</p>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <button id="theme-toggle" onclick="cambiarTema()">🌙</button>
+
+        <section id="hero">
+            <h1 id="typewriter"></h1>
+        </section>
+
+        <section id="compliments-section">
+            <button class="btn-love" onclick="darCumplido()">Presiona para decirte algo lindo❤️</button>
+            <p id="compliment-text"></p>
+        </section>
+
+        <div class="music-player">
+            <p id="song-title">Lofi Love Mix 🎵</p>
+            <div class="controls">
+                <button onclick="prevSong()">⏮️</button>
+                <button id="play-btn" onclick="toggleMusica()">▶️</button>
+                <button onclick="nextSong()">⏭️</button>
+            </div>
+        </div>
+
+        <section class="commit-log">
+            <h3>registro de nuestro amor</h3>
+            <div class="log-container">
+                <p><span>[2026-01-17]</span>"El inicio de todo ❤️"</p>
+                <p><span>[2026-01-18]</span>"Hice esta web para ti"</p>
+            </div>
+        </section>
+
+        <section id="collage">
+            <h2 class="section-title">Fotitos ❤️</h2>
+            <div class="collage-container">
+                <div class="polaroid">
+                    <img src="assets/foto1.jpg" alt="Momento 1">
+                    <p>Tu arte me encanta</p>
+                </div>
+                <div class="polaroid">
+                    <img src="assets/foto2.jpg" alt="Momento 2">
+                    <p>Tu tan LINDA :3</p>
+                </div>
+                <div class="polaroid">
+                    <img src="assets/foto3.jpg" alt="Dibujo">
+                    <p>Nuestro espacio propio, OJALA se haga realidad</p>
+                </div>
+                <div class="polaroid">
+                    <img src="assets/foto4.jpg" alt="Momento 4">
+                    <p>Tu de pequeña jsjs</p>
+                </div>
+                <div class="polaroid">
+                    <img src="assets/foto5.jpg" alt="Momento 5">
+                    <p>Yo vigilandote</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-timers">
+            <div class="timer-card">
+                <small>Siguiente Aniversario</small>
+                <p id="timer-aniversario"></p>
+            </div>
+            <div class="timer-card">
+                <small>Primer Mes</small>
+                <p id="timer-mes"></p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+[
+    {
+        "id": 1,
+        "text": "Esa piel morena es lo más precioso que mis ojos han visto."
+    },
+    {
+        "id": 2,
+        "text": "Amo cómo resalta tu sonrisa con tu color de piel, eres perfecta."
+    },
+    {
+        "id": 3,
+        "text": "Tu belleza es única, no hay nadie que se te compare."
+    },
+    {
+        "id": 4,
+        "text": "Cada vez que te veo, me pregunto cómo tuve tanta suerte de estar contigo."
+    },
+    {
+        "id": 5,
+        "text": "Tu tono de piel es el más lindo que existe."
+    },
+    {
+        "id": 6,
+        "text": "Amo cómo brilla tu piel bajo el sol."
+    },
+    {
+        "id": 7,
+        "text": "Eres mi morena favorita del mundo entero."
+    },
+    {
+        "id": 8,
+        "text": "Tu sonrisa resalta tanto con tu color de piel."
+    },
+    {
+        "id": 9,
+        "text": "Esa piel canela me tiene loquito."
+    },
+    {
+        "id": 10,
+        "text": "Eres la definición de perfección para mí."
+    },
+    {
+        "id": 11,
+        "text": "No hay nada más hermoso que verte sonreír."
+    },
+    {
+        "id": 12,
+        "text": "Tu mirada tiene un brillo que me encanta."
+    },
+    {
+        "id": 13,
+        "text": "Amo cada centímetro de tu piel."
+    },
+    {
+        "id": 14,
+        "text": "Eres la mujer más linda que he conocido."
+    },
+    {
+        "id": 15,
+        "text": "Tu belleza natural es lo que más me atrae."
+    },
+    {
+        "id": 16,
+        "text": "Tienes un ángel que ilumina todo."
+    },
+    {
+        "id": 17,
+        "text": "Me encanta lo bien que te queda cualquier color."
+    },
+    {
+        "id": 18,
+        "text": "Tu piel es como un atardecer que nunca quiero dejar de ver."
+    },
+    {
+        "id": 19,
+        "text": "Eres la morenita de mis sueños."
+    },
+    {
+        "id": 20,
+        "text": "Tu presencia hace que todo sea mejor."
+    },
+    {
+        "id": 21,
+        "text": "Amo la calidez que transmite tu piel."
+    },
+    {
+        "id": 22,
+        "text": "Eres mi obra de arte favorita."
+    },
+    {
+        "id": 23,
+        "text": "Tu color de piel es pura magia."
+    },
+    {
+        "id": 24,
+        "text": "Me encantas exactamente como eres."
+    },
+    {
+        "id": 25,
+        "text": "Eres la razón por la que sonrío tanto."
+    },
+    {
+        "id": 26,
+        "text": "Tu belleza me sigue sorprendiendo cada día."
+    },
+    {
+        "id": 27,
+        "text": "Tienes una luz propia que me fascina."
+    },
+    {
+        "id": 28,
+        "text": "Esa piel de canela es mi perdición."
+    },
+    {
+        "id": 29,
+        "text": "Amo cómo te ves hoy y todos los días."
+    },
+    {
+        "id": 30,
+        "text": "Eres lo más bonito de mi vida."
+    },
+    {
+        "id": 31,
+        "text": "Me encanta cuando te asustas con los juegos porque así tengo una excusa para abrazarte más fuerte."
+    },
+    {
+        "id": 32,
+        "text": "No importa qué monstruo salga en el juego, yo siempre te voy a proteger."
+    },
+    {
+        "id": 33,
+        "text": "Eres la miedosa más valiente que conozco."
+    },
+    {
+        "id": 34,
+        "text": "Tranquila, si el juego da miedo, yo cierro los ojos contigo."
+    },
+    {
+        "id": 35,
+        "text": "No te preocupes, yo te abrazo fuerte si sale un monstruo."
+    },
+    {
+        "id": 36,
+        "text": "Me encanta cuidarte cuando te asustas."
+    },
+    {
+        "id": 37,
+        "text": "Aunque tengas miedo, para mí eres la más valiente."
+    },
+    {
+        "id": 38,
+        "text": "Si el juego da miedo, nos escondemos juntos."
+    },
+    {
+        "id": 39,
+        "text": "Amo cómo te aferras a mi brazo cuando tienes miedo."
+    },
+    {
+        "id": 40,
+        "text": "Aquí estoy yo para espantar a todos los fantasmas."
+    },
+    {
+        "id": 41,
+        "text": "Tu cara de susto es lo más tierno del mundo."
+    },
+    {
+        "id": 42,
+        "text": "Prometo protegerte de cualquier juego de terror."
+    },
+    {
+        "id": 43,
+        "text": "Si tienes miedo, apagamos la compu y nos abrazamos."
+    },
+    {
+        "id": 44,
+        "text": "Me gusta ser tu refugio cuando te asustas."
+    },
+    {
+        "id": 45,
+        "text": "No dejes de apretarme la mano si el juego se pone feo."
+    },
+    {
+        "id": 46,
+        "text": "Eres mi miedosa favorita."
+    },
+    {
+        "id": 47,
+        "text": "Cierra los ojos, yo te aviso cuando pase el peligro."
+    },
+    {
+        "id": 48,
+        "text": "Tu valentía me da risa y ternura a la vez."
+    },
+    {
+        "id": 49,
+        "text": "Incluso asustada te ves hermosa."
+    },
+    {
+        "id": 50,
+        "text": "Soy el escudo oficial contra tus pesadillas."
+    },
+    {
+        "id": 51,
+        "text": "Me encanta que busques mi abrazo cuando sale un grito."
+    },
+    {
+        "id": 52,
+        "text": "No temas, yo peleo con los monstruos por ti."
+    },
+    {
+        "id": 53,
+        "text": "Tus saltitos de susto son lo más lindo."
+    },
+    {
+        "id": 54,
+        "text": "Estaré a tu lado en cada nivel difícil."
+    },
+    {
+        "id": 55,
+        "text": "Nadie te va a tocar mientras yo esté aquí."
+    },
+    {
+        "id": 56,
+        "text": "Amo ver películas de terror solo para que me abraces."
+    },
+    {
+        "id": 57,
+        "text": "Tu miedo es la excusa perfecta para estar pegaditos."
+    },
+    {
+        "id": 58,
+        "text": "Soy tu guardaespaldas personal de videojuegos."
+    },
+    {
+        "id": 59,
+        "text": "Tranquila, solo es un juego, yo soy real y te cuido."
+    },
+    {
+        "id": 60,
+        "text": "Conmigo nunca tendrás nada que temer."
+    },
+    {
+        "id": 61,
+        "text": "Me encanta cuando te pones celosita, me hace sentir que de verdad me cuidas."
+    },
+    {
+        "id": 62,
+        "text": "Eres mi celosa favorita, no te cambio por nada."
+    },
+    {
+        "id": 63,
+        "text": "¿Sabes qué? Tus berrinches son la parte más tierna de mi día."
+    },
+    {
+        "id": 64,
+        "text": "No tienes que celarme con nadie, si mis ojos solo tienen permiso para verte a ti."
+    },
+    {
+        "id": 65,
+        "text": "Tus celos me demuestran cuánto me quieres."
+    },
+    {
+        "id": 66,
+        "text": "Amo cuando haces esos berrinches de celosa."
+    },
+    {
+        "id": 67,
+        "text": "Eres mi celosita y no te cambio por nadie."
+    },
+    {
+        "id": 68,
+        "text": "Me encanta que me cuides tanto."
+    },
+    {
+        "id": 69,
+        "text": "Esos ojitos de celosa me dan mucha risa y ternura."
+    },
+    {
+        "id": 70,
+        "text": "Tranquila amor, nadie me mira como me miras tú."
+    },
+    {
+        "id": 71,
+        "text": "Tus celos son el picante de nuestra relación."
+    },
+    {
+        "id": 72,
+        "text": "Me hace sentir especial que me quieras solo para ti."
+    },
+    {
+        "id": 73,
+        "text": "Eres la dueña de todo mi corazón, no hay campo para nadie más."
+    },
+    {
+        "id": 74,
+        "text": "Amo tus 'quién es esa' aunque sepas que solo te amo a ti."
+    },
+    {
+        "id": 75,
+        "text": "Incluso celosa te ves increíblemente linda."
+    },
+    {
+        "id": 76,
+        "text": "No hay otra mujer en el mundo que me importe más que tú."
+    },
+    {
+        "id": 77,
+        "text": "Tus berrinches son mi debilidad."
+    },
+    {
+        "id": 78,
+        "text": "Me encanta que seas tan posesiva conmigo."
+    },
+    {
+        "id": 79,
+        "text": "Nadie podría ocupar tu lugar, ni en un millón de años."
+    },
+    {
+        "id": 80,
+        "text": "Tus celos me sacan una sonrisa siempre."
+    },
+    {
+        "id": 81,
+        "text": "Soy tuyo y de nadie más, ¿te queda claro?"
+    },
+    {
+        "id": 82,
+        "text": "Amo cómo marcas territorio."
+    },
+    {
+        "id": 83,
+        "text": "Tus celos son la prueba de que me amas."
+    },
+    {
+        "id": 84,
+        "text": "Me gusta que te preocupes por quién me escribe."
+    },
+    {
+        "id": 85,
+        "text": "Eres la única reina en mi castillo."
+    },
+    {
+        "id": 86,
+        "text": "Incluso cuando te enojas por celos te quiero abrazar."
+    },
+    {
+        "id": 87,
+        "text": "No tienes competencia, tú ya ganaste."
+    },
+    {
+        "id": 88,
+        "text": "Tus escenitas de celos son mis favoritas."
+    },
+    {
+        "id": 89,
+        "text": "Amo que me reclames mimos cuando estás celosa."
+    },
+    {
+        "id": 90,
+        "text": "Eres la única dueña de mis pensamientos."
+    },
+    {
+        "id": 91,
+        "text": "Amo cuando te pones mimosa, me reinicias la vida."
+    },
+    {
+        "id": 92,
+        "text": "Tus abrazos son mi lugar seguro en el mundo."
+    },
+    {
+        "id": 93,
+        "text": "Podría quedarme pegado a ti todo el día y no me cansaría."
+    },
+    {
+        "id": 94,
+        "text": "Gracias por ser tan cariñosa conmigo, me haces muy feliz."
+    },
+    {
+        "id": 95,
+        "text": "Amo cuando te pones mimosita conmigo."
+    },
+    {
+        "id": 96,
+        "text": "Tus mimos me curan cualquier mal día."
+    },
+    {
+        "id": 97,
+        "text": "Eres la persona más cariñosa que conozco."
+    },
+    {
+        "id": 98,
+        "text": "Me encanta sentir tu cariño cada segundo."
+    },
+    {
+        "id": 99,
+        "text": "Tus abrazos me dan la paz que necesito."
+    },
+    {
+        "id": 100,
+        "text": "Eres mi dosis diaria de amor."
+    },
+    {
+        "id": 101,
+        "text": "Amo que siempre quieras estar pegadita a mí."
+    },
+    {
+        "id": 102,
+        "text": "Tus besos son mi parte favorita del día."
+    },
+    {
+        "id": 103,
+        "text": "Gracias por ser tan tierna y dulce conmigo."
+    },
+    {
+        "id": 104,
+        "text": "Me encanta cuando me buscas para que te consienta."
+    },
+    {
+        "id": 105,
+        "text": "Eres un amor de persona."
+    },
+    {
+        "id": 106,
+        "text": "Tu cariño es lo que me mantiene feliz."
+    },
+    {
+        "id": 107,
+        "text": "Amo que me llenes de besos de la nada."
+    },
+    {
+        "id": 108,
+        "text": "Tus caricias me hacen sentir en las nubes."
+    },
+    {
+        "id": 109,
+        "text": "Eres la niña más mimada y me encanta que sea así."
+    },
+    {
+        "id": 110,
+        "text": "Me derrito cuando me hablas con voz de mimos."
+    },
+    {
+        "id": 111,
+        "text": "Tu amor es el regalo más grande que he recibido."
+    },
+    {
+        "id": 112,
+        "text": "Amo dormir abrazadito a ti."
+    },
+    {
+        "id": 113,
+        "text": "Eres mi refugio lleno de mimos."
+    },
+    {
+        "id": 114,
+        "text": "Gracias por demostrarme tu amor de tantas formas."
+    },
+    {
+        "id": 115,
+        "text": "Tus cariñitos son mi adicción."
+    },
+    {
+        "id": 116,
+        "text": "Amo que seas tan detallista y afectuosa."
+    },
+    {
+        "id": 117,
+        "text": "Tu calor es lo que más me gusta sentir."
+    },
+    {
+        "id": 118,
+        "text": "Eres mi pedacito de cielo."
+    },
+    {
+        "id": 119,
+        "text": "Me encanta que me pidas mimos a cada rato."
+    },
+    {
+        "id": 120,
+        "text": "Eres mi mundo entero lleno de cariño."
+    },
+    {
+        "id": 121,
+        "text": "Esa seguridad que tienes es lo que más me vuelve loco de ti."
+    },
+    {
+        "id": 122,
+        "text": "Me encanta cuando tomas la iniciativa, eres increíble."
+    },
+    {
+        "id": 123,
+        "text": "Eres una mezcla perfecta entre ternura y mucha personalidad."
+    },
+    {
+        "id": 124,
+        "text": "Esa personalidad atrevida me tiene loco."
+    },
+    {
+        "id": 125,
+        "text": "Me encanta que digas lo que piensas sin miedo."
+    },
+    {
+        "id": 126,
+        "text": "Tu seguridad es lo que más me atrae de ti."
+    },
+    {
+        "id": 127,
+        "text": "Eres una mujer decidida y eso me fascina."
+    },
+    {
+        "id": 128,
+        "text": "Me encanta cuando tomas el control de las cosas."
+    },
+    {
+        "id": 129,
+        "text": "Tu lado atrevido es el que me mantiene emocionado."
+    },
+    {
+        "id": 130,
+        "text": "Eres una mezcla perfecta de ternura y fuego."
+    },
+    {
+        "id": 131,
+        "text": "Amo que no te dejes de nadie."
+    },
+    {
+        "id": 132,
+        "text": "Tu mirada atrevida me deja sin aliento."
+    },
+    {
+        "id": 133,
+        "text": "Eres una mujer imparable."
+    },
+    {
+        "id": 134,
+        "text": "Me encanta que me sorprendas con tus ocurrencias."
+    },
+    {
+        "id": 135,
+        "text": "Tu energía es contagiosa y me encanta."
+    },
+    {
+        "id": 136,
+        "text": "Eres la más aventurera y eso es genial."
+    },
+    {
+        "id": 137,
+        "text": "Amo que siempre vayas por lo que quieres."
+    },
+    {
+        "id": 138,
+        "text": "Tu lado espontáneo es lo mejor de ti."
+    },
+    {
+        "id": 139,
+        "text": "Me encanta que seas tan auténtica y sin filtros."
+    },
+    {
+        "id": 140,
+        "text": "Eres una mujer con mucha garra."
+    },
+    {
+        "id": 141,
+        "text": "Tu picardía es lo que me enamora cada día."
+    },
+    {
+        "id": 142,
+        "text": "Me encanta cuando me desafías con tu mirada."
+    },
+    {
+        "id": 143,
+        "text": "Eres la combinación perfecta de todo lo que busco."
+    },
+    {
+        "id": 144,
+        "text": "Tu actitud es lo que te hace brillar."
+    },
+    {
+        "id": 145,
+        "text": "Amo que seas tan segura de ti misma."
+    },
+    {
+        "id": 146,
+        "text": "Eres una mujer fuerte y atrevida."
+    },
+    {
+        "id": 147,
+        "text": "Me encanta que no tengas miedo a los retos."
+    },
+    {
+        "id": 148,
+        "text": "Tu lado travieso es mi favorito."
+    },
+    {
+        "id": 149,
+        "text": "Eres la más valiente en todo lo que haces."
+    },
+    {
+        "id": 150,
+        "text": "Tu lado atrevido me hace quererte cada vez más."
+    }
+]

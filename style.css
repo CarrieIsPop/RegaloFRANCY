@@ -1,0 +1,247 @@
+/* Variables de Colores */
+:root {
+    --bg: #fff5f5;
+    --text: #ff4d6d;
+    --accent: #ff8fa3;
+    --card: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg: #1a1a1a;
+    --text: #ff8fa3;
+    --accent: #ff4d6d;
+    --card: #2d2d2d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+    overflow-x: hidden;
+    /* Cursor de corazón */
+    cursor: url('https://cdn-icons-png.flaticon.com/32/833/833472.png'), auto;
+}
+
+/* Pantalla de Carga */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.rose-svg { width: 150px; height: 150px; }
+.rose-svg path {
+    fill: none;
+    stroke: var(--text);
+    stroke-width: 2;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawRose 4s forwards ease-in-out;
+}
+@keyframes drawRose { to { stroke-dashoffset: 0; } }
+
+/* Elementos Fijos (Esquinas) */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1500;
+    background: var(--card);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+}
+
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    background: var(--card);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 1500;
+    text-align: center;
+}
+
+/* Contenido Central */
+main {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 80px;
+    margin-bottom: 120px;
+    text-align: center;
+}
+
+.hidden { display: none !important; }
+
+#typewriter {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    min-height: 3em;
+}
+
+/* Sección de Cumplidos */
+#compliments-section { margin: 40px 0; }
+.btn-love {
+    background: var(--text);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+}
+
+.btn-love {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 77, 109, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 109, 0); }
+}
+
+#compliment-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-style: italic;
+    transition: 0.3s;
+}
+
+/* Contadores Inferiores */
+.footer-timers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.timer-card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 140px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Brillos al Click */
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 0.8s forwards;
+}
+@keyframes explode {
+    to { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}
+
+/* --- Estilo Polaroid --- */
+.section-title {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.collage-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    perspective: 1000px; /* Le da profundidad */
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 40px 15px; /* Espacio abajo para el texto */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    width: 220px;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Para que la foto no se deforme */
+    filter: sepia(0.2); /* Efecto vintage suave */
+}
+
+.polaroid p {
+    color: #444; /* El texto en las polaroids reales suele ser oscuro */
+    font-family: 'Dancing Script', cursive, 'Arial'; 
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* Efecto de rotación aleatoria para que parezcan tiradas en una mesa */
+.polaroid:nth-child(odd) { transform: rotate(5deg); }
+.polaroid:nth-child(even) { transform: rotate(-5deg); }
+.polaroid:nth-child(3n) { transform: rotate(3deg) translateY(-10px); }
+
+/* Al pasar el mouse, la foto se endereza y sube */
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg) translateY(-20px) !important;
+    z-index: 100;
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.4);
+}
+
+/* Modo Noche: Oscurecemos un poquito el papel de la polaroid */
+[data-theme="dark"] .polaroid {
+    background: #e0e0e0;
+}
+
+/* --- Soporte para Celulares --- */
+@media (max-width: 600px) {
+    #typewriter {
+        font-size: 1.2rem; /* Letras un poco más pequeñas para que no se corten */
+        padding: 0 10px;
+    }
+
+    .polaroid {
+        width: 160px; /* Polaroids más pequeñas para que quepan de a dos o no ocupen toda la pantalla */
+        padding: 10px 10px 30px 10px;
+    }
+
+    .footer-timers {
+        flex-direction: column; /* Los contadores se ponen uno arriba del otro */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .timer-card {
+        width: 80%; /* Que ocupen casi todo el ancho del cel */
+    }
+
+    .music-player {
+        width: 160px; /* Reproductor más compacto */
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+    }
+}
