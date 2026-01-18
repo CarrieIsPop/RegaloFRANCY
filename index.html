@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Mi Favorita</title>
+    <title>Para Mi Favorita ❤️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div id="loader">
         <svg class="rose-svg" viewBox="0 0 100 100">
             <path class="stem" d="M50,98 Q50,70 50,40" />
@@ -16,60 +19,38 @@
         <p>Cargando nuestro lugar especial...</p>
     </div>
 
-    <main id="main-content" class="hidden">
-        <button id="theme-toggle" onclick="cambiarTema()">🌙</button>
+    <button id="theme-toggle" onclick="cambiarTema()">🌙</button>
 
+    <main id="main-content" class="hidden">
+        
         <section id="hero">
             <h1 id="typewriter"></h1>
         </section>
 
         <section id="compliments-section">
-            <button class="btn-love" onclick="darCumplido()">Presiona para decirte algo lindo❤️</button>
+            <button class="btn-love" onclick="darCumplido()">Presiona para decirte algo lindo ❤️</button>
             <p id="compliment-text"></p>
         </section>
-
-        <div class="music-player">
-            <p id="song-title">Lofi Love Mix 🎵</p>
-            <div class="controls">
-                <button onclick="prevSong()">⏮️</button>
-                <button id="play-btn" onclick="toggleMusica()">▶️</button>
-                <button onclick="nextSong()">⏭️</button>
-            </div>
-        </div>
 
         <section class="commit-log">
             <h3>registro de nuestro amor</h3>
             <div class="log-container">
-                <p><span>[2026-01-17]</span>"El inicio de todo ❤️"</p>
-                <p><span>[2026-01-18]</span>"Hice esta web para ti"</p>
+                <p><span>[2026-01-17]</span> "El inicio de todo ❤️"</p>
+                <p><span>[2026-01-18]</span> "Hice esta web para ti"</p>
             </div>
         </section>
 
-        <section id="collage">
-            <h2 class="section-title">Fotitos ❤️</h2>
-            <div class="collage-container">
-                <div class="polaroid">
-                    <img src="assets/foto1.jpg" alt="Momento 1">
-                    <p>Tu arte me encanta</p>
-                </div>
-                <div class="polaroid">
-                    <img src="assets/foto2.jpg" alt="Momento 2">
-                    <p>Tu tan LINDA :3</p>
-                </div>
-                <div class="polaroid">
-                    <img src="assets/foto3.jpg" alt="Dibujo">
-                    <p>Nuestro espacio propio, OJALA se haga realidad</p>
-                </div>
-                <div class="polaroid">
-                    <img src="assets/foto4.jpg" alt="Momento 4">
-                    <p>Tu de pequeña jsjs</p>
-                </div>
-                <div class="polaroid">
-                    <img src="assets/foto5.jpg" alt="Momento 5">
-                    <p>Yo vigilandote</p>
-                </div>
+        <h2 class="section-title">Fotitos ❤️</h2>
+        <div class="collage-container">
+            <div class="polaroid">
+                <img src="assets/foto1.jpg" alt="Foto 1">
+                <p>Tu arte me encanta</p>
             </div>
-        </section>
+            <div class="polaroid">
+                <img src="assets/foto2.jpg" alt="Foto 2">
+                <p>Nuestra favorita</p>
+            </div>
+            </div>
 
         <footer class="footer-timers">
             <div class="timer-card">
@@ -81,6 +62,15 @@
                 <p id="timer-mes"></p>
             </div>
         </footer>
+
+        <div class="music-player">
+            <p id="song-title">Lofi Love Mix 🎵</p>
+            <div class="controls">
+                <button onclick="prevSong()">⏮️</button>
+                <button id="play-btn" onclick="toggleMusica()">▶️</button>
+                <button onclick="nextSong()">⏭️</button>
+            </div>
+        </div>
     </main>
 
     <script src="script.js"></script>
