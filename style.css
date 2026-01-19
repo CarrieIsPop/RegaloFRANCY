@@ -1,53 +1,261 @@
-:root { --bg: #fff5f5; --text: #ff4d6d; --accent: #ff8fa3; --card: #ffffff; }
-[data-theme="dark"] { --bg: #1a1a1a; --text: #ff8fa3; --accent: #ff4d6d; --card: #2d2d2d; }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body { 
-    background-color: var(--bg); color: var(--text); font-family: sans-serif; 
-    transition: 0.5s; overflow-x: hidden; width: 100%; position: relative;
+/* 1. Variables de Colores y Temas */
+:root {
+    --bg: #fff5f5;
+    --text: #ff4d6d;
+    --accent: #ff8fa3;
+    --card: #ffffff;
 }
 
-#loader { position: fixed; inset: 0; background: var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 2000; }
-.rose-svg { width: 100px; height: 100px; fill: none; stroke: var(--text); stroke-width: 2; stroke-dasharray: 500; stroke-dashoffset: 500; animation: draw 4s forwards; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
+[data-theme="dark"] {
+    --bg: #1a1a1a;
+    --text: #ff8fa3;
+    --accent: #ff4d6d;
+    --card: #2d2d2d;
+}
 
-/* Botones en esquinas que no se mueven */
-#theme-toggle { position: fixed; top: 15px; right: 15px; z-index: 1500; background: var(--card); border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 20px; }
+/* 2. Reset y Configuración Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Vital para que el padding no rompa el ancho */
+}
 
-.music-player { position: fixed; bottom: 15px; right: 15px; width: 180px; background: var(--card); padding: 10px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); z-index: 1500; text-align: center; }
-.controls button { background: none; border: none; font-size: 20px; cursor: pointer; margin: 0 5px; }
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.5s ease, color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prohíbe el movimiento lateral */
+    width: 100%;
+    position: relative;
+    cursor: url('https://cdn-icons-png.flaticon.com/32/833/833472.png'), auto;
+}
 
-main { width: 100%; padding: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+/* 3. Pantalla de Carga (Loader) */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.rose-svg {
+    width: 120px;
+    height: 120px;
+    fill: none;
+    stroke: var(--text);
+    stroke-width: 2;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawRose 4s forwards ease-in-out;
+}
+
+@keyframes drawRose {
+    to { stroke-dashoffset: 0; }
+}
+
 .hidden { display: none !important; }
 
-#typewriter { font-size: 1.5rem; font-weight: bold; margin: 30px 0; min-height: 3em; width: 100%; max-width: 90%; line-height: 1.5; word-wrap: break-word; text-align: center; }
-
-/* El botón que SÍ quiere ser presionado */
-.btn-love { 
-    background: var(--text); color: white; border: none; padding: 15px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; font-size: 1.1rem;
-    animation: pulse 2s infinite; box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+/* 4. Elementos Fijos (Botón Tema y Música) */
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+    background: var(--card);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
 
-#compliment-text { margin-top: 20px; font-style: italic; font-size: 1.2rem; min-height: 2em; padding: 0 10px; }
+.music-player {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 170px;
+    background: var(--card);
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    z-index: 2000;
+    text-align: center;
+}
 
-/* Galería Polaroid */
-.collage-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0; width: 100%; }
-.polaroid { background: white; padding: 12px 12px 35px 12px; width: 230px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: rotate(-3deg); transition: 0.3s; }
-.polaroid img { width: 100%; height: 210px; object-fit: cover; }
-.polaroid p { color: #333; font-family: 'Dancing Script', cursive; font-size: 1.2rem; margin-top: 15px; }
+.music-player p { font-size: 0.75rem; margin-bottom: 8px; font-weight: bold; }
+
+.controls button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: var(--text);
+    transition: transform 0.2s;
+}
+
+/* 5. Contenido Central */
+main {
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 15px 120px 15px; /* Espacio para botones fijos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- ARREGLO DEL TEXTO PRINCIPAL --- */
+#typewriter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px auto;
+    min-height: 3em;
+    width: 95%; /* Ocupa el ancho del cel */
+    max-width: 600px;
+    line-height: 1.5;
+    /* Forzar que el texto baje de línea */
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    padding: 0 10px;
+}
+
+/* 6. Botón de Halagos con Animación Pulse */
+.btn-love {
+    background: var(--text);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(255, 77, 109, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
+#compliment-text {
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 1.2rem;
+    min-height: 2.5em;
+    max-width: 90%;
+}
+
+/* 7. Galería Polaroid (5 fotos) */
+.collage-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.polaroid {
+    background: white;
+    padding: 12px 12px 40px 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    width: 240px;
+    transition: transform 0.4s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.polaroid p {
+    color: #333;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+.polaroid:nth-child(odd) { transform: rotate(-3deg); }
 .polaroid:nth-child(even) { transform: rotate(4deg); }
 
-.footer-timers { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; padding-bottom: 50px; }
-.timer-box { background: var(--card); padding: 15px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); min-width: 150px; }
+[data-theme="dark"] .polaroid { background: #eee; }
 
-.sparkle { position: absolute; width: 10px; height: 10px; background: gold; border-radius: 50%; pointer-events: none; animation: boom 0.8s forwards; }
-@keyframes boom { to { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; } }
+/* 8. Contadores Inferiores */
+.footer-timers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+}
 
-/* Fix específico para pantallas pequeñas */
+.timer-box {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    min-width: 160px;
+}
+
+/* 9. Brillos/Partículas */
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #FFD700;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 0.8s forwards;
+}
+
+@keyframes explode {
+    to { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}
+
+/* --- 10. SOPORTE FINAL PARA MÓVILES --- */
 @media (max-width: 600px) {
-    #typewriter { font-size: 1.2rem; }
-    .polaroid { width: 180px; }
-    .music-player { width: 150px; font-size: 12px; }
+    #typewriter {
+        font-size: 1.15rem; /* Tamaño ideal para que no se corte */
+        margin: 20px auto;
+    }
+
+    .polaroid {
+        width: 190px; /* Más pequeñas para que no empujen la pantalla */
+    }
+
+    .polaroid img { height: 180px; }
+
+    .music-player {
+        width: 150px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
 }
