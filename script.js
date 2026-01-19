@@ -1,7 +1,8 @@
+// Configuración de Fechas (Anniversary: Jan 17)
 const ANNIVERSARY = new Date("Jan 17, 2027 00:00:00").getTime();
 const FIRST_MONTH = new Date("Feb 17, 2026 00:00:00").getTime();
 
-// IMPORTANTE: 'L' mayúscula para GitHub
+// IMPORTANTE: 'L' mayúscula para que suene en GitHub
 const playlist = [{ title: "Lofi Love Mix 🎵", file: "assets/Lofi1.mp3" }];
 let currentIdx = 0;
 const audio = new Audio(playlist[currentIdx].file);
@@ -10,19 +11,20 @@ audio.loop = true;
 let compliments = [];
 let usedIds = JSON.parse(localStorage.getItem('visto')) || [];
 
+// 1. Cargar el JSON de halagos
 async function initCompliments() {
     try {
         const resp = await fetch('assets/compliments.json');
         compliments = await resp.json();
-    } catch (e) { console.log("Cargando base de datos..."); }
+    } catch (e) { console.log("Cargando halagos..."); }
 }
 
+// 2. Dar cumplido y desbloquear música en celular
 function darCumplido() {
-    // Esto hace que la música empiece a sonar al primer toque en celular
     if (audio.paused) {
         audio.play().then(() => {
             document.getElementById("play-btn").innerText = "⏸️";
-        }).catch(e => console.log("Esperando click del usuario"));
+        }).catch(e => console.log("Esperando interacción"));
     }
 
     const p = document.getElementById("compliment-text");
@@ -36,19 +38,28 @@ function darCumplido() {
     setTimeout(() => { p.innerText = seleccionada.text; p.style.opacity = 1; }, 300);
 }
 
+// 3. Efecto Typewriter con saltos de línea manuales
 function escribir() {
-    const msg = "Hola mi amor... hice este rincon solo para nosotros. ❤️";
+    const msg = "Hola mi amor...<br>hice este rincón<br>solo para nosotros. ❤️";
     let i = 0;
     const dest = document.getElementById("typewriter");
+    if (!dest) return;
     dest.innerHTML = ""; 
+
     const interval = setInterval(() => {
-        if (msg[i] === " ") { dest.innerHTML += "&nbsp;"; } // Arreglo de los espacios
-        else { dest.innerHTML += msg[i]; }
-        i++;
-        if (i === msg.length) clearInterval(interval);
-    }, 75);
+        if (msg.substring(i, i + 4) === "<br>") {
+            dest.innerHTML += "<br>";
+            i += 4;
+        } else {
+            if (msg[i] === " ") { dest.innerHTML += "&nbsp;"; }
+            else { dest.innerHTML += msg[i]; }
+            i++;
+        }
+        if (i >= msg.length) clearInterval(interval);
+    }, 85); 
 }
 
+// 4. Controles de Música y Tema
 function toggleMusica() {
     const btn = document.getElementById("play-btn");
     if (audio.paused) { audio.play().then(() => btn.innerText = "⏸️"); }
@@ -62,6 +73,7 @@ function cambiarTema() {
     document.getElementById("theme-toggle").innerText = isDark ? "🌙" : "☀️";
 }
 
+// 5. Contadores de tiempo
 setInterval(() => {
     const ahora = new Date().getTime();
     const calc = (target, id) => {
@@ -78,13 +90,14 @@ setInterval(() => {
     calc(FIRST_MONTH, "timer-mes");
 }, 1000);
 
+// 6. Efectos visuales (Click)
 document.addEventListener('mousedown', (e) => {
     for(let i=0; i<6; i++) {
         const s = document.createElement('div');
         s.className = 'sparkle';
         s.style.left = e.pageX + 'px'; s.style.top = e.pageY + 'px';
-        s.style.setProperty('--x', (Math.random()-0.5)*100+'px');
-        s.style.setProperty('--y', (Math.random()-0.5)*100+'px');
+        s.style.setProperty('--x', (Math.random()-0.5)*120+'px');
+        s.style.setProperty('--y', (Math.random()-0.5)*120+'px');
         document.body.appendChild(s);
         setTimeout(() => s.remove(), 800);
     }
